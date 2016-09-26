@@ -205,9 +205,9 @@ public class ReactContext extends ContextWrapper {
   /**
    * Should be called by the hosting Fragment in {@link Fragment#onActivityResult}
    */
-  public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
+  public void onActivityResult(int requestCode, int resultCode, Intent data) {
     for (ActivityEventListener listener : mActivityEventListeners) {
-      listener.onActivityResult(activity, requestCode, resultCode, data);
+      listener.onActivityResult(requestCode, resultCode, data);
     }
   }
 

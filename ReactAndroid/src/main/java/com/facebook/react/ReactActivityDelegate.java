@@ -132,7 +132,7 @@ public class ReactActivityDelegate {
   public void onActivityResult(int requestCode, int resultCode, Intent data) {
     if (getReactNativeHost().hasInstance()) {
       getReactNativeHost().getReactInstanceManager()
-        .onActivityResult(getPlainActivity(), requestCode, resultCode, data);
+        .onActivityResult(requestCode, resultCode, data);
     }
   }
 

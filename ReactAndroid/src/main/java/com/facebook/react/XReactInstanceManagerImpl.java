@@ -607,9 +607,9 @@ import static com.facebook.systrace.Systrace.TRACE_TAG_REACT_JAVA_BRIDGE;
   }
 
   @Override
-  public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
+  public void onActivityResult(int requestCode, int resultCode, Intent data) {
     if (mCurrentReactContext != null) {
-      mCurrentReactContext.onActivityResult(activity, requestCode, resultCode, data);
+      mCurrentReactContext.onActivityResult(requestCode, resultCode, data);
     }
   }
 
